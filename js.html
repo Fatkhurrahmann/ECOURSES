@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h3 align="center">Array</h3>
+    <button id="myButton">Tampilkan Array</button>
+<ul id="myList"></ul>
+
+    <script>
+       let myArray = ['Front End Dev.', 'Back End Dev.', 'Full Stack Dev.'];
+
+let button = document.getElementById('myButton');
+let list = document.getElementById('myList');
+
+button.addEventListener('click', function() {
+    list.innerHTML = myArray.join('<br>');
+});
+
+    </script>
+
+    <h2>Javascript Perulangan For</h2>
+    <button onclick="aca()"> Coba Tekan </button>
+    <p id="Coba"></p>
+    <script>
+        function aca() {
+            const maxIterations = prompt("Masukkan sebuah nomor:");
+            var text = "";
+            var i;
+            for (let i = 1; i <= maxIterations; i++) {
+                text += "Daftar hadir " + i + "<br>";
+            }
+            document.getElementById("Coba").innerHTML = text;
+        }
+    </script>
+
+    <div>
+        <button onclick="Compare()">Bulan Apa Skrang?</button>
+        <p id="Co"></p>
+        <script>
+            function Compare() {
+                var bulan;
+                switch (new Date().getMonth()) {
+                    case 0:
+                        bulan = "Januari";
+                        break;
+                    case 1:
+                        bulan = "Febuari";
+                        break;
+                    case 2:
+                        bulan = "Maret";
+                        break;
+                    case 3:
+                        bulan = "April";
+                        break;
+                    case 4:
+                        bulan = "Mei";
+                        break;
+                    case 5:
+                        bulan = "Juni";
+                        break;
+                    case 6:
+                        bulan = "July";
+                    case 7:
+                        bulan = "Agustus";
+                        break;
+                    case 8:
+                        bulan = "September";
+                        break;
+                    case 9:
+                        bulan = "Oktober";
+                        break;
+                    case 10:
+                        bulan = "November";
+                        break;
+                    case 11:
+                        bulan = "Desember";
+                        break;
+                }
+                document.getElementById("Co").innerHTML = "Ini Adalah Bulan " + bulan;
+            }
+        </script>
+        <HR>
+        </HR>
+        <button><a href="index.html">Back to web ECOURSES</a></button>
+</body>
+
+</html>
